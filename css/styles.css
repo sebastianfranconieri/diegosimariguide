@@ -548,7 +548,7 @@ button{ font: inherit; color: inherit; background: none; border: none; cursor: p
   letter-spacing: 0.08em;
 }
 .section-head__eyebrow{
-  font-size: 0.84rem;
+  font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -578,7 +578,7 @@ button{ font: inherit; color: inherit; background: none; border: none; cursor: p
 /* ==========================================================================
    GUIADAS — grid + modal
    ========================================================================== */
-.guiadas{ background: var(--ink); }
+.guiadas{ background: var(--ink); margin-top: 20px;}
 
 .guide-grid{
   max-width: 1400px;
@@ -832,7 +832,7 @@ button{ font: inherit; color: inherit; background: none; border: none; cursor: p
   max-width: 640px;
 }
 .about__eyebrow{
-  font-size: 0.84rem;
+  font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
