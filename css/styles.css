@@ -390,6 +390,14 @@ button{ font: inherit; color: inherit; background: none; border: none; cursor: p
   will-change: transform;
   opacity: 0.7;
 }
+
+.hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
 .hero__scrim{
   position: absolute;
   inset: 0;
@@ -472,15 +480,14 @@ button{ font: inherit; color: inherit; background: none; border: none; cursor: p
 /* ============ ADAPTACIÓN PARA MÓVILES (PANTALLAS PEQUEÑAS) ============ */
 @media (max-width: 768px) {
   .hero__video {
-    /* En celulares reducimos los márgenes para que el video no quede demasiado pequeño */
-    top: 280px;
-    bottom: 100px;
-    left: 90px;
-    right: 120px;
-    width: calc(100% - 180px);
-    height: calc(100% - 480px);
-    
-    /* Mantiene el encuadre vertical centrado */
+    top: 53%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    width: 82%;
+    height: 85%;
+    max-height: 780px;
     object-fit: cover;
   }
 }
