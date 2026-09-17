@@ -744,3 +744,37 @@
       }
     }
   });
+
+
+let ticking = false;
+
+function updateVideoZoom() {
+  const video = document.querySelector('.hero__video');
+  if (!video) return;
+
+  const scrollY = window.scrollY;
+  const maxScroll = 500; // Distancia en px donde alcanza el zoom máximo
+  
+  // Modifica 0.25 si quieres que aumente más o menos tamaño (ej. 0.35 para más zoom)
+  const maxZoom = 0.25; 
+
+  // Calcula el factor de escala proporcional al scroll
+  const progress = Math.min(Math.max(scrollY / maxScroll, 0), 1);
+  const scale = 1 + (progress * maxZoom);
+
+  // Aplica la transformación directamente según el ancho de pantalla
+  if (window.innerWidth <= 768) {
+    video.style.transform = `translate(-50%, -50%) scale(${scale})`;
+  } else {
+    video.style.transform = `scale(${scale})`;
+  }
+
+  ticking = false;
+}
+
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    window.requestAnimationFrame(updateVideoZoom);
+    ticking = true;
+  }
+}, { passive: true });
