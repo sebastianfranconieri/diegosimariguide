@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diego Simari — IFMGA/UIAGM Mountain Guide</title>
+<meta name="description" content="Diego Simari, IFMGA/UIAGM Mountain Guide. Ski, climbing and paragliding in Chamonix and Patagonia.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#home" class="nav__brand">
+      <span class="nav__brand-name">DIEGO SIMARI</span>
+      <span class="nav__brand-tag">MOUNTAIN GUIDE -IFMGA · UIAGM</span>
+    </a>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="#guides" class="nav__link">Activities</a>
+      <a href="#about" class="nav__link">About</a>
+      <a href="#contact" class="nav__link nav__link--cta">Contact</a>
+    </nav>
+
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="hero">
+  <div class="hero__media" id="heroMedia">
+    <!-- REEMPLAZAR: foto principal de montaña (idealmente 2400x1600px o más) -->
+  <img class="ph ph--hero" src="images/hero.jpg" alt="Mountain landscape">
+  </div>
+  <div class="hero__scrim"></div>
+
+  <div class="hero__content">
+     <h1 class="hero__title">Mountain Guide</h1>
+    <h1 class="hero__title">Chamonix &amp; Patagonia</h1>
+    <p class="hero__subtitle">Ski · Climb · Paraglide</p>
+  </div>
+
+  <a href="#guides" class="hero__scroll" aria-label="Keep scrolling">
+    <span>EXPLORE ALL ACTIVITIES</span>
+    <svg width="16" height="24" viewBox="0 0 16 24" fill="none" aria-hidden="true">
+      <path d="M8 1V23M8 23L1 16M8 23L15 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+</section>
+
+<!-- ============ GUIDES ============ -->
+<section id="guides" class="guiadas">
+  <div class="section-head">
+    <h2 class="section-head__title">Activities</h2>
+    <p class="section-head__lede">Explore the different activities we offer in the mountains.</p>
+  </div>
+
+  <div class="guide-grid" id="guideGrid">
+    <!-- Las 6 tarjetas se generan desde js/script.js (objeto GUIDES) -->
+  </div>
+</section>
+
+<!-- Guide modal -->
+<div class="modal" id="guideModal" aria-hidden="true">
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal__close" data-close aria-label="Close">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+        <path d="M1 1L17 17M17 1L1 17" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+    </button>
+
+    <div class="modal__body">
+      <div class="modal__photos" id="modalPhotos"><!-- fotos generadas por JS --></div>
+
+      <div class="modal__text">
+        <p class="modal__code" id="modalCode"></p>
+        <h3 class="modal__title" id="modalTitle"></h3>
+        <p class="modal__tagline" id="modalTagline"></p>
+        <div class="modal__paragraphs" id="modalParagraphs"></div>
+      </div>
+    </div>
+
+    <div class="modal__footer">
+      <p class="modal__footer-text" id="modalFooterText"></p>
+      <a href="#contact" class="btn btn--primary" data-close>Book now</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="about">
+  <div class="about__media">
+    <!-- REEMPLAZAR: retrato de Diego en montaña -->
+     <img class="ph ph--hero" src="images/climb5.jpg" alt="Diego Simari Guide">
+  </div>
+
+  <div class="about__content">
+    <p class="about__eyebrow">About Me</p>
+    <h2 class="about__title">Twenty years between southern ice and Mont Blanc granite.</h2>
+    <p class="about__text">
+      I'm Diego Simari, a certified IFMGA/UIAGM Mountain Guide. I split the year between Chamonix, where I guide
+      classic rock and ice routes in the Mont Blanc massif, and Patagonia, where I spend the southern summers
+      between El Chaltén and Torres del Paine. My job is to read the mountain — the weather, the snow, the state
+      of the group — and make, trip after trip, the simplest decision of all: get up there and come back well.
+    </p>
+    <p class="about__text">
+      I work with climbers taking their first steps on a rope team as well as with teams planning multi-week
+      expeditions in remote ranges. Every program is built to measure: technical level, time available, and
+      what each person is looking for in the mountains.
+    </p>
+
+    <ul class="about__creds">
+      <li>IFMGA - UIAGM — Certified Mountain Guide</li>
+      <li>20+ years of experience in the Alps and Patagonia</li>
+      <li>Based in Chamonix Mont Blanc and Patagonia Argentina</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="gallery">
+  <div class="section-head section-head--center">
+    <!-- <h2 class="section-head__title">On the mountain</h2> -->
+  </div>
+
+  <div class="gallery__grid" id="galleryGrid">
+    <!-- 12 placeholders generados por JS -->
+    <img src="images/summit2.jpg" alt="Montaña 1">
+    <img src="images/glacier.jpg" alt="Montaña 2">
+    <img src="images/summit8.jpg" alt="Montaña 8">
+    <img src="images/summit3.jpg" alt="Montaña 10">
+    <img src="images/ski.jpg" alt="Montaña 3">
+    <img src="images/ski4.jpg" alt="Montaña 4">
+    <img src="images/climb4.jpeg" alt="Montaña 5">
+    <img src="images/summit7.jpg" alt="Montaña 6">
+    <img src="images/touring.jpg" alt="Montaña 7">
+    <img src="images/climb3.jpg" alt="Montaña 8">
+    <img src="images/lookout.jpg" alt="Montaña 9">
+    <img src="images/condor.jpg" alt="Montaña 10">
+    <img src="images/trona.jpg" alt="Montaña 11">
+    <img src="images/ski3.jpg" alt="Montaña 12">
+    <img src="images/summit.jpg" alt="Montaña 7">
+    <img src="images/ski2.jpg" alt="Montaña 9">
+  </div>
+</section>
+
+<!-- ============ CTA / VIDEO BANNER ============ -->
+<section id="contact" class="cta-banner">
+  <div class="cta-banner__media">
+    <!-- REEMPLAZAR: video de fondo. Ver comentario en el <video> más abajo -->
+   <img class="cta-banner__img" src="images/summit5.jpg" alt="Mountain landscape">
+    <div class="cta-banner__scrim"></div>
+   <!-- <video class="cta-banner__video" autoplay muted loop playsinline poster="images/hero.jpg">
+    <source src="videos/banner.mp4" type="video/mp4">
+  </video> -->
+</div>
+
+  <div class="cta-banner__content">
+    <h2 class="cta-banner__title">Book your next adventure</h2>
+    <a href="mailto:contact@diegosimari.com" class="btn btn--primary btn--large">Book now</a>
+    <!-- <p class="cta-banner__contact">
+      <a href="mailto:contact@diegosimari.com">contact@diegosimari.com</a>
+      <span aria-hidden="true">·</span>
+      <a href="tel:+330000000000">+33 0 00 00 00 00</a>
+    </p> -->
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__brand">
+      <p class="footer__brand-name">DIEGO SIMARI</p>
+      <p class="footer__brand-tag">Mountain Guide</p>
+
+      <div class="footer__logos">
+        <!-- REEMPLAZAR: logo del guía y logos oficiales IFMGA / UIAGM -->
+        <img class="ph ph--logo" src="images/logoguide.png" alt="Guide logo">
+        <!-- <div class="ph ph--logo" data-ph-label="IFMGA logo"></div>
+        <div class="ph ph--logo" data-ph-label="UIAGM logo"></div> -->
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <p class="footer__col-title">Site map</p>
+      <nav class="footer__links">
+        <a href="#home">Home</a>
+        <a href="#guides">Activities</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+
+    <div class="footer__col">
+      <p class="footer__col-title">Contact</p>
+      <div class="footer__links">
+        <a href="mailto:contact@diegosimari.com">contact@diegosimari.com</a>
+        <a href="tel:+330000000000">+33 0 00 00 00 00</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+
+    <!-- <div class="footer__col footer__col--cta">
+      <p class="footer__col-title">Ready to explore?</p>
+      <a href="mailto:contact@diegosimari.com" class="btn btn--outline">Direct contact</a>
+    </div> -->
+  </div>
+
+  <div class="footer__bottom">
+    <p>© <span id="year"></span> Diego Simari. All rights reserved.</p>
+    <p>Chamonix, France — Bariloche, Argentina</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
