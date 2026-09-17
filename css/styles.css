@@ -1126,6 +1126,15 @@ button{ font: inherit; color: inherit; background: none; border: none; cursor: p
   color: var(--ember); /* Cambia el color del icono al pasar el ratón */
 }
 
+footer .reveal,
+footer .reveal-up,
+footer .reveal-fade {
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+  transition: none !important;
+}
+
 @media (max-width: 900px){
   .footer__top{ grid-template-columns: 1fr 1fr; }
 }
@@ -1133,6 +1142,7 @@ button{ font: inherit; color: inherit; background: none; border: none; cursor: p
   .footer__top{ grid-template-columns: 1fr; }
   .footer__bottom{ flex-direction: column; }
 }
+
 
 /* ==========================================================================
    SCROLL REVEAL (single restrained pattern, headings only)
