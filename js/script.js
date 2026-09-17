@@ -726,3 +726,21 @@
   }
 
 })();
+
+
+// Control de carga fluida para el video hero (evita glitch)
+  document.addEventListener('DOMContentLoaded', function () {
+    var heroVideo = document.querySelector('.hero__video');
+    if (heroVideo) {
+      if (heroVideo.readyState >= 3) {
+        heroVideo.classList.add('is-loaded');
+      } else {
+        heroVideo.addEventListener('loadeddata', function () {
+          heroVideo.classList.add('is-loaded');
+        });
+        heroVideo.addEventListener('canplay', function () {
+          heroVideo.classList.add('is-loaded');
+        });
+      }
+    }
+  });

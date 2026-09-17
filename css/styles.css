@@ -447,7 +447,19 @@ button{ font: inherit; color: inherit; background: none; border: none; cursor: p
   object-fit: cover;
   z-index: 1; /* Queda por encima de la imagen */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Opcional: sombra para darle profundidad */
+
+ /* Transición suave para evitar parpadeos */
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
 }
+
+
+/* Estado visible */
+.hero__video.is-loaded {
+  opacity: 1 !important;
+}
+
+
 
 /* Los textos y botones deben quedar siempre por encima del video y de la imagen */
 .hero__scrim,
